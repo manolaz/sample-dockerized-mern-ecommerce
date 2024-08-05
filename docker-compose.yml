@@ -3,13 +3,13 @@ services:
   client:
     build: client
     ports:
-      - '8080:8080'
+      - '8081:8081'
   server:
     build: server
     environment:
       - PORT=3000
       - BASE_API_URL=api
-      - CLIENT_URL=http://localhost:8080
+      - CLIENT_URL=http://localhost:8081
       - JWT_SECRET=update_your_JWT_secret
       - MONGO_URI=update_your_mongo_URI
     ports:
